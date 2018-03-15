@@ -1,0 +1,5 @@
+<div>
+  <div>{{video?.title}}</div>
+  <!-- <img class="oneVideo" src="http://img.youtube.com/vi/{{video?.id}}/0.jpg"> same as below -->
+  <img class="oneVideo" [src]=" 'http://img.youtube.com/vi/' + video?.id + '/0.jpg' ">
+</div>

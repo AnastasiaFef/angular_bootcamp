@@ -1,0 +1,8 @@
+video-list works!
+<ul class="collection">
+  <li *ngFor="let video of (videoList | async)" [class.active]="video === selectedVideo" (click)="selectVideo(video)"  class="collection-item">
+    <abc-video-card [video]="video"></abc-video-card>
+  </li>
+</ul>
+
+<!-- (click)="playVideo(video)" -->

@@ -1,0 +1,13 @@
+<section class="card">
+  <div class="card-content">
+    <div class="card-title">Search Something</div>
+    <form [formGroup]="search">
+      <label for="searchInput">Search</label>
+      <input id="searchInput" type="text" formControlName="searchInput">
+      <div *ngIf="searchGroup.get('searchInput').hasError('required') && searchGroup.get('searchInput').touched">
+        Please enter a string
+      </div>
+      <button class="btn" [disabled]="!searchGroup.valid" [class.disabled]="!searchGroup.valid">Search</button>
+    </form>
+  </div>
+</section>

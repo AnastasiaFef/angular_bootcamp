@@ -1,0 +1,13 @@
+video-list works!
+<ul class="collection">
+  <li 
+  *ngFor="let video of videoList | async" 
+  [class.active]="video.id === (selectedVideoId | async" 
+  class="collection-item"
+  >
+    <a [queryParams]="{video: video.id}" [routerLink]="['']">
+    <abc-video-card [video]="video"></abc-video-card> 
+    </a>
+  </li>
+</ul>
+

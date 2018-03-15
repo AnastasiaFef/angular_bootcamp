@@ -6,7 +6,7 @@
     "module": "commonjs",
     "types": [
       "jasmine",
-      "node"
+      "node" //use node to run, not browser
     ]
   },
   "files": [
