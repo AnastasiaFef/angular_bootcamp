@@ -4,10 +4,10 @@
     <form [formGroup]="search">
       <label for="searchInput">Search</label>
       <input id="searchInput" type="text" formControlName="searchInput">
-      <div *ngIf="search.get('searchInput').hasError('required') && search.get('searchInput').touched">
+      <div *ngIf="searchGroup.get('searchInput').hasError('required') && searchGroup.get('searchInput').touched">
         Please enter a string
       </div>
-      <button class="btn" [disabled]="!search.valid" [class.disabled]="!search.valid">Search</button>
+      <button class="btn" [disabled]="!searchGroup.valid" [class.disabled]="!searchGroup.valid">Search</button>
     </form>
   </div>
 </section>

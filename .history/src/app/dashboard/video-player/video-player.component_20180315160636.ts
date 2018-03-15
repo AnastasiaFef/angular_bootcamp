@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute, Params } from '@angular/router';
 import { pluck, switchMap, share, tap } from 'rxjs/operators';
 import { VideoLoaderService } from '../video-list-loader.service'
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 const EMBED_URL = 'http://www.youtube.com/embed/';
@@ -17,7 +17,6 @@ const EMBED_URL = 'http://www.youtube.com/embed/';
 export class VideoPlayerComponent implements OnInit {
 
   video: Observable<Video>;
-  currentVideoUrl: SafeUrl;
 
   constructor(route: ActivatedRoute, loader: VideoLoaderService, domSanitizer: DomSanitizer) { //loader can be any name
     this.video = route.queryParams
